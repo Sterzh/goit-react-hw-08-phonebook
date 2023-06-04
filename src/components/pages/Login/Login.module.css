@@ -1,0 +1,25 @@
+.contactForm {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 15px 0;
+  gap: 15px;
+}
+
+.contactFormButton {
+  width: 100px;
+  border-radius: 15px;
+  color: #ffff;
+  background-color: #2d598b;
+}
+
+.inputForm {
+  margin-left: auto;
+}
+
+.contactFormLabel {
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+}

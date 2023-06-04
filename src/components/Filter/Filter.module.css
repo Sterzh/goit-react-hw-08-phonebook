@@ -1,0 +1,17 @@
+.filterText {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 36px;
+  color: #000000;
+  margin: 0;
+  padding: 15px 0px;
+}
+
+.filterInput {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+}

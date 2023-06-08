@@ -1,6 +1,5 @@
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import { Suspense } from 'react';
 import css from './Layout.module.css';
 import { UserMenu } from 'components/UserMenu/UserMenu';
 import { AuthNav } from 'components/AuthNav/AuthNav';
@@ -30,11 +29,6 @@ export const Layout = () => {
           {isLoggedIn ? <UserMenu /> : <AuthNav></AuthNav>}
         </nav>
       </header>
-      <main>
-        {/* <Suspense fallback={<div>Loading...</div>}>
-        <Outlet />
-        </Suspense> */}
-      </main>
     </>
   );
 };

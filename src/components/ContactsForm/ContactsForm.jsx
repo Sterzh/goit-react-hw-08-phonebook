@@ -1,13 +1,13 @@
-import css from './ContactForm.module.css';
+import css from './ContactsForm.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContactThunk } from '../../redux/operations';
 import { useState } from 'react';
-import ContactList from '../ContactList';
+import ContactList from '../ContactList/ContactList';
 import { Children } from 'react';
 import { selectIsLoggedIn } from 'redux/selectors';
 import { Navigate } from 'react-router-dom';
 
-export default function ContactForm() {
+const ContactForm = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(state => state.contacts.items);
   const [id, setId] = useState('');
@@ -89,4 +89,6 @@ export default function ContactForm() {
       )}
     </>
   );
-}
+};
+
+export default ContactForm;

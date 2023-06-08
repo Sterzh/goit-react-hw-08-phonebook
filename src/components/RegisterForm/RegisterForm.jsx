@@ -1,11 +1,11 @@
-import css from './Register.module.css';
+import css from './RegisterForm.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { registerUserThunk } from '../../../redux/operations';
+import { registerUserThunk } from '../../redux/operations';
 import { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import { selectIsLoggedIn } from 'redux/selectors';
 
-const Register = () => {
+const RegisterForm = () => {
   const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -98,4 +98,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default RegisterForm;

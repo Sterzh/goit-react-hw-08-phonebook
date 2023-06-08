@@ -1,11 +1,11 @@
-import css from './Login.module.css';
+import css from './LoginForm.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { logInUserThunk } from '../../../redux/operations';
+import { logInUserThunk } from '../../redux/operations';
 import { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import { selectIsLoggedIn } from 'redux/selectors';
 
-const LogIn = () => {
+const LogInForm = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -65,4 +65,4 @@ const LogIn = () => {
   );
 };
 
-export default LogIn;
+export default LogInForm;

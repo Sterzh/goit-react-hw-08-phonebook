@@ -1,0 +1,24 @@
+.Header {
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* margin: 0; */
+  border-bottom: solid 1px #000;
+  background-color: #2d598b;
+  padding: 15px 15px;
+}
+
+.HeaderTitle {
+  margin: 0 auto;
+  color: #ffff;
+}
+
+.Nav {
+  display: flex;
+  justify-content: space-around;
+}

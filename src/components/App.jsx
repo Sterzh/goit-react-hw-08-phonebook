@@ -1,45 +1,34 @@
-import { Routes, Route, Navigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { Routes, Route } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import { fetchCurrentUser } from 'redux/operations';
-import { Suspense, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Layout } from './Layout/Layout';
-import { selectIsLoggedIn } from 'redux/selectors';
 import { lazy } from 'react';
 
 export default function App() {
-  const isLoggedIn = useSelector(selectIsLoggedIn);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchCurrentUser());
   }, [dispatch]);
 
-  const ContactForm = lazy(() => import('./ContactForm/ContactForm'));
-  const LogIn = lazy(() => import('./pages/Login/Login'));
-  const Register = lazy(() => import('./pages/Register/Register'));
-  const NotFound = lazy(() => import('./pages/NotFound'));
+  const HomePage = lazy(() => import('./Pages/Home'));
+  const ContactsPage = lazy(() => import('./Pages/Contacts'));
+  const LogInPage = lazy(() => import('./LoginForm/LoginForm'));
+  const RegisterPage = lazy(() => import('./RegisterForm/RegisterForm'));
+  const NotFoundPage = lazy(() => import('./Pages/NotFound'));
 
   return (
     <>
-      <Layout />
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route
-            index
-            element={
-              isLoggedIn ? (
-                <Navigate to="/contacts" />
-              ) : (
-                <Navigate to="/login" />
-              )
-            }
-          />
-          <Route path="/contacts" element={<ContactForm />} />
-          <Route path="/login" element={<LogIn />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Suspense>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="/contacts" element={<ContactsPage />} />
+          <Route path="/login" element={<LogInPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
+      </Routes>
     </>
   );
 }

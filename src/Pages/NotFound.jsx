@@ -12,12 +12,10 @@ const styles = {
   },
 };
 
-const NotFound = () => {
+export default function NotFound() {
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>Page not found! Enter another query.</h1>
     </div>
   );
-};
-
-export default NotFound;
+}

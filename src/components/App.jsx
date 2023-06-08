@@ -16,11 +16,11 @@ export default function App() {
     dispatch(fetchCurrentUser());
   }, [dispatch]);
 
-  const HomePage = lazy(() => import('./Pages/Home'));
-  const ContactsPage = lazy(() => import('./Pages/Contacts'));
-  const LoginPage = lazy(() => import('./LoginForm/LoginForm'));
-  const RegisterPage = lazy(() => import('./RegisterForm/RegisterForm'));
-  const NotFoundPage = lazy(() => import('./Pages/NotFound'));
+  const HomePage = lazy(() => import('../Pages/Home'));
+  const ContactsPage = lazy(() => import('../Pages/Contacts'));
+  const LoginPage = lazy(() => import('../Pages/Login'));
+  const RegisterPage = lazy(() => import('../Pages/Register'));
+  const NotFoundPage = lazy(() => import('../Pages/NotFound'));
 
   return isRefreshing ? (
     <b>Refreshing user...</b>

@@ -6,8 +6,8 @@ const styles = {
     justifyContent: 'center',
   },
   title: {
-    fontWeight: 500,
-    fontSize: 48,
+    fontWeight: 700,
+    fontSize: 32,
     textAlign: 'center',
   },
 };
@@ -15,7 +15,7 @@ const styles = {
 export default function Home() {
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>Welcome to the contact book application!</h1>
+      <h1 style={styles.title}>Welcome to the Phonebook app!</h1>
     </div>
   );
 }

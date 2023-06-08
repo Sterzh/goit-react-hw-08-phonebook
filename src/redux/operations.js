@@ -38,9 +38,6 @@ export const logInUserThunk = createAsyncThunk(
     try {
       const response = await userLogin(user);
       token.set(response.data.token);
-      console.log(response.status);
-      if (response.status === 200) {
-      }
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

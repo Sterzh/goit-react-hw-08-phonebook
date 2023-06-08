@@ -18,7 +18,6 @@ const authSlice = createSlice({
     builder
 
       .addCase(registerUserThunk.fulfilled, (state, action) => {
-        console.log(action.payload);
         state.error = null;
         state.user = action.payload.user;
         state.token = action.payload.token;

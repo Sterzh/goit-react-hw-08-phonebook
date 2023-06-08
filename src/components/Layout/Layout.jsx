@@ -25,13 +25,16 @@ export const Layout = () => {
       <header className={css.Header}>
         <h1 className={css.HeaderTitle}>Phonebook</h1>
         <nav className={css.Nav}>
-          <StyledLink to="/contacts">Contacts</StyledLink>
+          {isLoggedIn ? <StyledLink to="/contacts">Contacts</StyledLink> : ' '}
+          {/* <StyledLink to="/contacts">Contacts</StyledLink> */}
           {isLoggedIn ? <UserMenu /> : <AuthNav></AuthNav>}
         </nav>
       </header>
-      <Suspense fallback={<div>Loading...</div>}>
+      <main>
+        {/* <Suspense fallback={<div>Loading...</div>}>
         <Outlet />
-      </Suspense>
+        </Suspense> */}
+      </main>
     </>
   );
 };

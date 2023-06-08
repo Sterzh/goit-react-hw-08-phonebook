@@ -10,7 +10,7 @@
   /* margin: 0; */
   border-bottom: solid 1px #000;
   background-color: #2d598b;
-  padding: 15px 0px;
+  padding: 15px 15px;
 }
 
 .HeaderTitle {
@@ -20,7 +20,7 @@
 
 .Nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   /* justify-content: start; */
   /* gap: 100%; */
 }

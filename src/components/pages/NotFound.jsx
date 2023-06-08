@@ -1,13 +1,22 @@
+const styles = {
+  container: {
+    minHeight: 'calc(100vh - 50px)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  title: {
+    fontWeight: 700,
+    fontSize: 32,
+    textAlign: 'center',
+  },
+};
+
 const NotFound = () => {
   return (
-    <h2
-      style={{
-        paddingTop: 15,
-        paddingBottom: 15,
-      }}
-    >
-      Page not found! Enter another query.
-    </h2>
+    <div style={styles.container}>
+      <h1 style={styles.title}>Page not found! Enter another query.</h1>
+    </div>
   );
 };
 
